@@ -1,3 +1,3 @@
 [alias]
-    push-current = !git push origin $(gitcwb)
-    pull-current = !git pull origin $(gitcwb)
+    push-current = !git push $(git remote) $(gitcwb)
+    pull-current = !git pull $(git remote) $(gitcwb)
