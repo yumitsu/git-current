@@ -32,5 +32,4 @@ chmod:
 install: prepare clean sh chmod alias
 	cp -r $(SCRIPT_BUILT_FILE) $(TARGET_BIN_FILE)
 	cp -r $(ALIAS_BUILT_FILE) $(TARGET_ALIAS_FILE)
-	chmod +x 
 	$(GITCONFIG_INCLUDE_CMD)
