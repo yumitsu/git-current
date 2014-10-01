@@ -1,3 +1,4 @@
 [alias]
+    cwb = !$(echo gitcwb)
     push-current = !git push $(git remote) $(gitcwb)
     pull-current = !git pull $(git remote) $(gitcwb)

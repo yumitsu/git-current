@@ -9,8 +9,9 @@ SCRIPT_BUILT_FILE = $(PWD)/gitcwb
 ALIAS_SRC_FILE = $(PWD)/git-current
 ALIAS_BUILT_FILE = $(PWD)/gitconfig
 GITCONFIG_INCLUDE_CMD = git config --global --add include.path '$(TARGET_ALIAS_FILE)'
+GITCONFIG_UNINSTALL_CMD = git config --global --unset include.path '$(INSTALL_DIR)'
 
-all: prepare clean sh alias install
+all: prepare clean sh chmod alias install
 
 prepare:
 	test -d $(INSTALL_DIR) || mkdir -p $(INSTALL_DIR)
@@ -33,3 +34,8 @@ install: prepare clean sh chmod alias
 	cp -r $(SCRIPT_BUILT_FILE) $(TARGET_BIN_FILE)
 	cp -r $(ALIAS_BUILT_FILE) $(TARGET_ALIAS_FILE)
 	$(GITCONFIG_INCLUDE_CMD)
+
+uninstall:
+	rm -f $(TARGET_BIN_FILE)
+	rm -f $(TARGET_ALIAS_FILE)
+	$(GITCONFIG_UNINSTALL_CMD)
