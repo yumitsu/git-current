@@ -2,7 +2,7 @@ git-current
 ===========
 
 ### Description
-`git-current` is a small unobtrusive tool that adds 3 handy aliases to `git` standart commands: `pull-current` and `push-current` that equivalent to `git (pull|push) <current-remote> <current-working-branch>`, and `cwb` that show you current working branch.
+`git-current` is a small unobtrusive tool that adds 3 handy aliases to `git` standart commands: `pull-current` and `push-current` that equivalent to `git (pull|push) origin <current-working-branch>`, and `cwb` that show you current working branch.
 
 ### Why?
 It becomes *very* convenient when you have to deal with a *ton* of branches during development: aliases are shorter than full command, you don't need to remember working branch name, there is no chance for typo etc.
