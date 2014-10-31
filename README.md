@@ -38,12 +38,11 @@ To get current branch simple run `git cwb`.
 #### Install
 `/bin/bash -c 'git clone https://github.com/yumitsu/git-current.git && cd git-current && make install'`. `make install` should:
 
-1. Create `~/.git-current` dir
-2. Place there 2 files: shell script named `gitcwb` and file `.aliases`
-3. Add `.aliases` to `[include]` section of your `~/.gitconfig`
+1. Create `~/.git-current` file with git aliases
+2. Add `.git-current` to `[include]` section of your `~/.gitconfig`
 
 #### Uninstall
-Just run `make uninstall` and make sure that `~/.git-current` dir was removed along with `[include]` section of `~/.gitconfig`.
+Just run `make uninstall` and make sure that `~/.git-current` file was removed along with `[include]` section of `~/.gitconfig`.
 
 ### Issues & bugs
 Despite the fact that I highly doubt there are (possible) bugs in such foolproof code, I concede there may be some issues with install process (although it is very simple too), so feel free to report them via [issue tracker](https://github.com/yumitsu/git-current/issues).
@@ -53,4 +52,4 @@ Thank you!
 [X11/MIT license](https://en.wikipedia.org/wiki/MIT_License).
 
 ### "Just go, read 'man git-config' and set ya git properly, scrub!"
-[OK, whatever](http://www.amishrakefight.org/gfy/).
+Well, that wasn't bad at all, so let `git-cwb.sh` to belong here as a memento to unforgettable experience ~~of pain~~
